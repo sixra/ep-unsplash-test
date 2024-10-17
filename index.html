@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ePages Unsplash Image Search Test</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>ePages Unsplash Image Search Test</h1>
+    <form id="searchForm">
+      <div class="input-group">
+        <label for="keyword">Keyword:</label>
+        <input type="text" id="keyword" placeholder="Enter a keyword" required>
+        <p class="description">Search for images based on a specific keyword. Example: "nature", "city", "abstract"</p>
+      </div>
+      <div class="input-group">
+        <label for="color">Color:</label>
+        <select id="color">
+          <option value="">Any</option>
+          <option value="black">Black</option>
+          <option value="white">White</option>
+          <option value="yellow">Yellow</option>
+          <option value="orange">Orange</option>
+          <option value="red">Red</option>
+          <option value="purple">Purple</option>
+          <option value="magenta">Magenta</option>
+          <option value="green">Green</option>
+          <option value="teal">Teal</option>
+          <option value="blue">Blue</option>
+        </select>
+        <p class="description">Filter images based on a specific color. Choose from the supported color names.</p>
+      </div>
+      <div class="input-group">
+        <label for="orientation">Orientation:</label>
+        <div class="orientation-buttons">
+          <button type="button" class="orientation-btn" data-orientation="">Any</button>
+          <button type="button" class="orientation-btn" data-orientation="landscape">Landscape</button>
+          <button type="button" class="orientation-btn" data-orientation="portrait">Portrait</button>
+          <button type="button" class="orientation-btn" data-orientation="squarish">Square</button>
+        </div>
+        <p class="description">Specify the orientation of the images. Choose from any (no specific orientation), landscape (horizontal), portrait (vertical), or square.</p>
+      </div>
+      <div class="input-group">
+        <label for="content-filter">Content Filter:</label>
+        <select id="content-filter">
+          <option value="">None</option>
+          <option value="low">Low</option>
+          <option value="high">High</option>
+        </select>
+        <p class="description">Filter results based on the content safety level. Choose from low (more strict), high (less strict), or none (no filter).</p>
+      </div>
+      <div class="input-group">
+        <label for="order-by">Order By:</label>
+        <select id="order-by">
+          <option value="relevant">Relevant</option>
+          <option value="latest">Latest</option>
+          <option value="oldest">Oldest</option>
+        </select>
+        <p class="description">Determine the sorting order of the search results. Choose from relevant (best match), latest (newest first), or oldest (oldest first).</p>
+      </div>
+      <div class="input-group">
+        <label for="collections">Collections:</label>
+        <input type="text" id="collections" placeholder="Enter collection IDs (comma-separated)">
+        <p class="description">Search for images within specific Unsplash collections. Enter collection IDs separated by commas. Example: "1234567,8901234"</p>
+      </div>
+      <div class="input-group">
+        <label for="user">User:</label>
+        <input type="text" id="user" placeholder="Enter a username">
+        <p class="description">Search for images by a specific Unsplash user. Enter the username of the desired user. Example: "johndoe"</p>
+      </div>
+      <div class="input-group">
+        <label for="count">Count:</label>
+        <input type="number" id="count" value="6" min="1" max="30">
+        <p class="description">Specify the number of images to retrieve per page. Enter a value between 1 and 30. Example: "10"</p>
+      </div>
+      <div class="input-group">
+        <label for="page">Page:</label>
+        <input type="number" id="page" value="1" min="1">
+        <p class="description">Specify the page number of the search results to retrieve. Enter a value greater than or equal to 1. Example: "2"</p>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+    <div id="imageGrid"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
