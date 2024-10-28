@@ -60,10 +60,16 @@
         <p class="description">Determine the sorting order of the search results. Choose from relevant (best match), latest (newest first), or oldest (oldest first).</p>
       </div>
       <div class="input-group">
-        <label for="collections">Collections:</label>
-        <input type="text" id="collections" placeholder="Enter collection IDs (comma-separated)">
-        <p class="description">Search for images within specific Unsplash collections. Enter collection IDs separated by commas. Example: "1234567,8901234"</p>
-      </div>
+        <label for="collections">Collection ID:</label>
+        <input type="text" id="collections" name="collections">
+        <div class="toggle-container">
+          <label class="switch">
+            <input type="checkbox" id="collectionToggle">
+            <span class="slider round"></span>
+          </label>
+          <span>Use default collection</span>
+        </div>
+      </div>      
       <div class="input-group">
         <label for="user">User:</label>
         <input type="text" id="user" placeholder="Enter a username">
